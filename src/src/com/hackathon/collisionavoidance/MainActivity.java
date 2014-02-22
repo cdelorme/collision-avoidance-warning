@@ -79,31 +79,6 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 	}
 
-<<<<<<< HEAD
-	/**
-	 * Catch provider enabled
-	 */
-	@Override
-	public void onProviderEnabled(String provider) {
-		// TODO Auto-generated method stub
-
-	}
-
-	/**
-	 * Catch status change
-	 */
-	@Override
-	public void onStatusChanged(String provider, int status, Bundle extras) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void onLocationChanged(Location arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-=======
     /**
      * Create Options Menu
      */
@@ -113,5 +88,4 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
->>>>>>> 653de5e045f600214a538ac598e045af78fab10c
 }
