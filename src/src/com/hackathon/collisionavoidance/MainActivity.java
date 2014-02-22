@@ -41,11 +41,6 @@ public class MainActivity extends Activity {
 	protected TextView tv;
 
 	/**
-	 * ???
-	 */
-	protected Context mCtx;
-
-	/**
 	 * Executed on activity launch
 	 */
 	@Override
@@ -82,5 +77,8 @@ public class MainActivity extends Activity {
 			this.wifiServiceEnabled = false;
 		}
 		// @todo logic to swap text/color to toggle start to stop button
+
+		// Prepare Activity UI
+        setContentView(R.layout.activity_main);
 	}
 }

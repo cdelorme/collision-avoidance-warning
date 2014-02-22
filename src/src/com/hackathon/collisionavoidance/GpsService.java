@@ -3,6 +3,7 @@ package com.hackathon.collisionavoidance;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.Context;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -35,8 +36,11 @@ public class GpsService extends Service implements LocationListener {
                 .getSystemService(Context.LOCATION_SERVICE);
 
         lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d74fad14454536c6b8e80839cf0d028989a2a2ce
     }
 
     public void onStartCommand()
