@@ -2,9 +2,9 @@ package com.hackathon.collisionavoidance;
 
 import java.util.List;
 import java.util.ArrayList;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.BroadcastReceiver;
 import android.net.wifi.p2p.WifiP2pConfig;
 import android.net.wifi.p2p.WifiP2pDevice;
 import android.net.wifi.p2p.WifiP2pDeviceList;
