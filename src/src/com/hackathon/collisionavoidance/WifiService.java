@@ -68,6 +68,9 @@ public class WifiService extends Service {
     public void onStartCommand()
     {
         // ???
+        // Perhaps we tell the GpsService to begin polling now?
+
+        // Add listener to the GpsService to handle poll data
     }
 
     /**
