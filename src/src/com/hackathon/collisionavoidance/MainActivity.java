@@ -7,11 +7,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.Context;
 import android.widget.TextView;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
 
 public class MainActivity extends Activity implements LocationListener {
+
+	/**
+	 * Constant activity tag
+	 */
+	public static final String TAG = "MainActivity";
 
 	/**
 	 * Gps Service Thread
@@ -34,19 +36,9 @@ public class MainActivity extends Activity implements LocationListener {
 	protected boolean wifiServiceEnabled;
 
 	/**
-	 * Constant activity tag
-	 */
-	public static final String TAG = "MainActivity";
-
-	/**
 	 * Text View (for Activity)
 	 */
 	protected TextView tv;
-
-	/**
-	 * Location Manager (for gps service)
-	 */
-	protected LocationManager lm;
 
 	/**
 	 * ???
@@ -90,45 +82,6 @@ public class MainActivity extends Activity implements LocationListener {
 			this.wifiServiceEnabled = false;
 		}
 		// @todo logic to swap text/color to toggle start to stop button
-
-		boolean network_enabled = false;
-
-		LocationManager lm = (LocationManager) this
-				.getSystemService(Context.LOCATION_SERVICE);
-
-		lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
-
-		setContentView(R.layout.activity_main);
-	}
-
-	/**
-	 * Create Options Menu
-	 */
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-
-	/**
-	 * Catch location change event
-	 */
-	@Override
-	public void onLocationChanged(Location location) {
-		// TODO Auto-generated method stub
-		int lat = (int) (location.getLatitude());
-		int lng = (int) (location.getLongitude());
-		int t = (int)(location.getTime());
-		float s;
-		if ( location.hasSpeed() ) {
-			 s = (location.getSpeed());
-		} else s = 10;
-
-		String disp = "lat:" + lat + " long:" + lng + " time:" + t + " speed:" + s;
-		Log.d(TAG, disp);
-		Log.d(TAG, location.toString());
-
 	}
 
 	/**

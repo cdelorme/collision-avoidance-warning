@@ -77,6 +77,7 @@ public class WifiBroadcastReceiver extends BroadcastReceiver implements PeerList
         } else if (GpsService.TRANSMIT_GPS_DATA.equals(action)) {
 
             // Extract data
+            String data = intent.getStringExtra(GpsService.GPS_DATA_KEY);
 
             // Transmit intent data
             this.transmit(data);
@@ -114,10 +115,10 @@ public class WifiBroadcastReceiver extends BroadcastReceiver implements PeerList
     /**
      * Transmit asynchronous listener
      */
-    public void transmit()
+    public void transmit(String data)
     {
-
-        // Send out packet data in wifi message
-
+        // Insert into last 5
+        // Prepare Packet data
+        // Send packet to peers
     }
 }
