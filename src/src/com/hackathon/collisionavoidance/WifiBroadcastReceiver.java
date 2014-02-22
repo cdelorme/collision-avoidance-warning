@@ -36,7 +36,7 @@ public class WifiBroadcastReceiver extends BroadcastReceiver implements PeerList
     /**
      * List of peers
      */
-    protected List peers = new ArrayList<WifiP2pDevice>();
+    protected List<WifiP2pDevice> peers = new ArrayList<WifiP2pDevice>();
 
     /**
      * Constructor
