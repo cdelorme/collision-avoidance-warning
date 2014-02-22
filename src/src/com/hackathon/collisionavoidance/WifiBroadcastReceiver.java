@@ -101,7 +101,7 @@ public class WifiBroadcastReceiver extends BroadcastReceiver implements PeerList
 
             // Connect
             // @todo add success/failure handling
-            this.wifiP2pManager.connect(this.wifiP2pChannel, config, null);
+            this.wifiP2pManager.connect(this.wifiP2pChannel, wifiP2pConfig, null);
         }
     }
 }
