@@ -3,7 +3,6 @@ package com.hackathon.collisionavoidance;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
-import android.content.Context;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -16,7 +15,7 @@ public class GpsService extends Service implements LocationListener {
     /**
      * Constant activity tag
      */
-    public static final String TAG = "MainActivity";
+    private static final String TAG = "GPSservice";
 
     /**
      * Intent Definition
@@ -27,8 +26,6 @@ public class GpsService extends Service implements LocationListener {
      * Intent Definition
      */
     public static final String GPS_DATA_KEY = "gpsData";
-
-	private static final String TAG = "GPSservice";
 
     /**
      * Location Manager (for gps service)
