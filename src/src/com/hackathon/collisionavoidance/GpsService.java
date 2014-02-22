@@ -6,6 +6,11 @@ import android.os.IBinder;
 
 public class GpsService extends Service {
 
+    /**
+     * Intent Definition
+     */
+    public static final String TRANSMIT_GPS_DATA = "com.hackathon.collisionavoidance.transmit_gps_data";
+
     public void onCreate()
     {
 

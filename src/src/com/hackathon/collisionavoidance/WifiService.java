@@ -54,8 +54,12 @@ public class WifiService extends Service {
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(WifiP2pManager.WIFI_P2P_STATE_CHANGED_ACTION);
         intentFilter.addAction(WifiP2pManager.WIFI_P2P_PEERS_CHANGED_ACTION);
-        intentFilter.addAction(WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION);
-        intentFilter.addAction(WifiP2pManager.WIFI_P2P_THIS_DEVICE_CHANGED_ACTION);
+        // intentFilter.addAction(WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION);
+        // intentFilter.addAction(WifiP2pManager.WIFI_P2P_THIS_DEVICE_CHANGED_ACTION);
+        intentFilter.addAction(GpsService.TRANSMIT_GPS_DATA);
+
+        // Register Receiver /w Filter
+        registerReceiver(this.wifiBroadcastReceiver, intentFilter);
 
         // Look for peers
         // @todo how often does the system actively look for peers, and can we adjust that interval?
@@ -72,16 +76,6 @@ public class WifiService extends Service {
         // Perhaps we tell the GpsService to begin polling now?
 
         // Add listener to the GpsService to handle poll data
-    }
-
-    /**
-     * Transmit asynchronous listener
-     */
-    public void transmit()
-    {
-
-        // Send out packet data in wifi message
-
     }
 
 	@Override

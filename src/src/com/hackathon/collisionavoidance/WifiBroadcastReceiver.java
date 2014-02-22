@@ -74,6 +74,12 @@ public class WifiBroadcastReceiver extends BroadcastReceiver implements PeerList
 
             // Request peers and connect to PeerListListener
             this.wifiP2pManager.requestPeers(this.wifiP2pChannel, this);
+        } else if (GpsService.TRANSMIT_GPS_DATA.equals(action)) {
+
+            // Extract data
+
+            // Transmit intent data
+            this.transmit(data);
         }
     }
 
@@ -103,5 +109,15 @@ public class WifiBroadcastReceiver extends BroadcastReceiver implements PeerList
             // @todo add success/failure handling
             this.wifiP2pManager.connect(this.wifiP2pChannel, wifiP2pConfig, null);
         }
+    }
+
+    /**
+     * Transmit asynchronous listener
+     */
+    public void transmit()
+    {
+
+        // Send out packet data in wifi message
+
     }
 }
