@@ -9,8 +9,31 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_world" />
+
+    <ToggleButton
+        android:id="@+id/togglebutton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="103dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:onClick="onToggleClicked"
+        android:textOff="Vibrate off"
+        android:textOn="Vibrate on" />
+
+    <ToggleButton
+        android:id="@+id/togglebutton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/togglebutton1"
+        android:layout_below="@+id/togglebutton1"
+        android:layout_marginTop="70dp"
+        android:onClick="onToggleClicked"
+        android:textOff="Vibrate off"
+        android:textOn="Vibrate on" />
 
 </RelativeLayout>
