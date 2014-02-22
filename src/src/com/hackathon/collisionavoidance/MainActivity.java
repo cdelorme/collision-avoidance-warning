@@ -69,24 +69,24 @@ public class MainActivity extends Activity implements LocationListener {
 		/**
 		 *  Move these to start button click event
 		 */
-		Intent intent = new Intent(this, GpsService.class);
+		Intent gpsIntent = new Intent(this, GpsService.class);
 		if (this.gpsServiceEnabled != true) {
-			startService(intent);
+			startService(gpsIntent);
 			this.gpsServiceEnabled = true;
 		} else {
-			stopService(intent);
+			stopService(gpsIntent);
 			this.gpsServiceEnabled = false;
 		}
 
 		/**
 		 *  Move these to start button click event
 		 */
-		Intent intent = new Intent(this, WifiService.class);
+		Intent wifiIntent = new Intent(this, WifiService.class);
 		if (this.wifiServiceEnabled != true) {
-			startService(intent);
+			startService(wifiIntent);
 			this.wifiServiceEnabled = true;
 		} else {
-			stopService(intent);
+			stopService(wifiIntent);
 			this.wifiServiceEnabled = false;
 		}
 		// @todo logic to swap text/color to toggle start to stop button
