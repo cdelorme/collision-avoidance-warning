@@ -117,6 +117,9 @@ public class WifiBroadcastReceiver extends BroadcastReceiver implements PeerList
      */
     public void transmit(String data)
     {
+        // @todo get group leader to deliver message
+        // @todo custom logic to handle sending message if self is group leader?
+
         // Insert into last 5
         // Prepare Packet data
         // Send packet to peers
