@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.net.wifi.p2p.WifiP2pManager.Channel;
-import android.os.Bundle;
 import android.os.IBinder;
 
 /**
@@ -39,9 +38,8 @@ public class WifiService extends Service {
     /**
      * Automatically executed on service creation
      */
-    public void onCreate(Bundle savedInstanceState)
+    public void onCreate()
     {
-        super.onCreate(savedInstanceState);
 
         // Create new Wifi P2p Manager
         this.wifiP2pManager = (WifiP2pManager) getSystemService(Context.WIFI_P2P_SERVICE);
