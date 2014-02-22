@@ -1,6 +1,8 @@
 package com.hackathon.collisionavoidance;
 
 import android.util.Log;
+import android.location.Location;
+import android.location.LocationListener;
 import android.os.Bundle;
 import android.view.Menu;
 import android.app.Activity;
@@ -109,5 +111,11 @@ public class MainActivity extends Activity implements LocationListener {
 	public void onStatusChanged(String provider, int status, Bundle extras) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public void onLocationChanged(Location arg0) {
+		// TODO Auto-generated method stub
+		
 	}
 }

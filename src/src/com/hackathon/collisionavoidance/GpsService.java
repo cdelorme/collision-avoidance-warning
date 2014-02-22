@@ -1,7 +1,11 @@
 package com.hackathon.collisionavoidance;
 
+import android.os.Bundle;
 import android.os.IBinder;
+import android.util.Log;
+import android.view.Menu;
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
 import android.location.LocationListener;
@@ -19,6 +23,8 @@ public class GpsService extends Service implements LocationListener {
      */
     public static final String GPS_DATA_KEY = "gpsData";
 
+	private static final String TAG = "GPSservice";
+
     /**
      * Location Manager (for gps service)
      */
@@ -31,8 +37,6 @@ public class GpsService extends Service implements LocationListener {
                 .getSystemService(Context.LOCATION_SERVICE);
 
         lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
-
-        setContentView(R.layout.activity_main);
 
     }
 
@@ -49,15 +53,7 @@ public class GpsService extends Service implements LocationListener {
 		return null;
 	}
 
-    /**
-     * Create Options Menu
-     */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
+    
 
     /**
      * Catch location change event
@@ -85,4 +81,22 @@ public class GpsService extends Service implements LocationListener {
         intent.setAction(this.TRANSMIT_GPS_DATA);
         sendBroadcast(intent);
     }
+
+	@Override
+	public void onProviderDisabled(String provider) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onProviderEnabled(String provider) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onStatusChanged(String provider, int status, Bundle extras) {
+		// TODO Auto-generated method stub
+		
+	}
 }
