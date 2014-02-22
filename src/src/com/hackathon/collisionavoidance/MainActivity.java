@@ -91,7 +91,7 @@ public class MainActivity extends Activity implements LocationListener {
 		}
 		// @todo logic to swap text/color to toggle start to stop button
 
-		this.network_enabled = false;
+		boolean network_enabled = false;
 
 		LocationManager lm = (LocationManager) this
 				.getSystemService(Context.LOCATION_SERVICE);
