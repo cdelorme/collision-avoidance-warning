@@ -30,15 +30,14 @@ public class GpsService extends Service implements LocationListener {
     /**
      * Location Manager (for gps service)
      */
-    protected LocationManager lm;
+    protected LocationManager locationManager;
 
     public void onCreate()
     {
 
-        LocationManager lm = (LocationManager) this
-                .getSystemService(Context.LOCATION_SERVICE);
-
-        lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+        // Grab the location manager and poll for position when position changes
+        LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
     }
 
     public void onStartCommand()
