@@ -11,11 +11,6 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
 	/**
-	 * Constant activity tag
-	 */
-	public static final String TAG = "MainActivity";
-
-	/**
 	 * Gps Service Thread
 	 */
 	protected GpsService gpsService;

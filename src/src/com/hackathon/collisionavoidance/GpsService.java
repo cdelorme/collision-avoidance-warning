@@ -15,6 +15,11 @@ import android.view.Menu;
 public class GpsService extends Service implements LocationListener {
 
     /**
+     * Constant activity tag
+     */
+    public static final String TAG = "MainActivity";
+
+    /**
      * Intent Definition
      */
     public static final String TRANSMIT_GPS_DATA = "com.hackathon.collisionavoidance.transmit_gps_data";
@@ -36,11 +41,6 @@ public class GpsService extends Service implements LocationListener {
                 .getSystemService(Context.LOCATION_SERVICE);
 
         lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
-<<<<<<< HEAD
-
-
-=======
->>>>>>> d74fad14454536c6b8e80839cf0d028989a2a2ce
     }
 
     public void onStartCommand()
