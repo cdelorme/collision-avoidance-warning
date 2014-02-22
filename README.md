@@ -25,9 +25,10 @@ For example, if no wifi devices in range, it will stop polling for gps coordinat
     [user launches activity]->[clicks start button]
     [clicks start button]->[launches wifi & gps threads]
     [launches wifi & gps threads]->[gps connects]
-    [launches wifi & gps threads]->[wifi listens for connections and begins transmission cycle]
-    [wifi listens for connections and begins transmission cycle]->[tells gps to begin polling cycle for data transmission (100ms intervals)]
-    [tells gps to begin polling cycle for data transmission (100ms intervals)]->[wifi transmits gps data]
+    [launches wifi & gps threads]->[wifi listens for connections and begins transmission cycle & listens for ready-packets asynchronously]
+    [wifi listens for connections and begins transmission cycle & listens for ready-packets asynchronously]->[tells gps to begin polling cycle for data transmission (100ms intervals)]
+    [tells gps to begin polling cycle for data transmission (100ms intervals)]->[prepares BSM (basic safety message) packet with gps data and sends to wifi async listener]
+    [prepares BSM (basic safety message) packet with gps data and sends to wifi async listener]->[catches & transmits prepared BSM packets]
 
 
 ## [sequence diagram (in web sequence diagrams syntax)](https://www.websequencediagrams.com/)
