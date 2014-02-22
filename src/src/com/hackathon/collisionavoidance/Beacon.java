@@ -1,3 +1,5 @@
+package com.hackathon.collisionavoidance;
+
 public class Beacon {
 
     double[] Lats;
