@@ -45,7 +45,7 @@ public class WifiService extends Service {
         this.wifiP2pManager = (WifiP2pManager) getSystemService(Context.WIFI_P2P_SERVICE);
 
         // Initialize Wifi P2p Manager to acquire channel
-        this.wifiP2pChannel = manager.initialize(this, getMainLooper(), null);
+        this.wifiP2pChannel = wifiP2pManager.initialize(this, getMainLooper(), null);
 
         // Create wifi direct broadcast tool
         this.wifiBroadcastReceiver = new WifiBroadcastReceiver(this.wifiP2pManager, this.wifiP2pChannel);
