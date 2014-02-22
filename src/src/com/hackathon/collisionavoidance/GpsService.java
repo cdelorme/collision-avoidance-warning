@@ -1,17 +1,30 @@
 package com.hackathon.collisionavoidance;
 
+<<<<<<< HEAD
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
 import android.view.Menu;
+=======
+>>>>>>> 653de5e045f600214a538ac598e045af78fab10c
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.Context;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.Bundle;
+import android.os.IBinder;
+import android.util.Log;
+import android.view.Menu;
 
 public class GpsService extends Service implements LocationListener {
+
+    /**
+     * Constant activity tag
+     */
+    public static final String TAG = "MainActivity";
 
     /**
      * Intent Definition
@@ -37,7 +50,10 @@ public class GpsService extends Service implements LocationListener {
                 .getSystemService(Context.LOCATION_SERVICE);
 
         lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 653de5e045f600214a538ac598e045af78fab10c
     }
 
     public void onStartCommand()
@@ -53,8 +69,11 @@ public class GpsService extends Service implements LocationListener {
 		return null;
 	}
 
+<<<<<<< HEAD
     
 
+=======
+>>>>>>> 653de5e045f600214a538ac598e045af78fab10c
     /**
      * Catch location change event
      */
@@ -82,6 +101,7 @@ public class GpsService extends Service implements LocationListener {
         sendBroadcast(intent);
     }
 
+<<<<<<< HEAD
 	@Override
 	public void onProviderDisabled(String provider) {
 		// TODO Auto-generated method stub
@@ -99,4 +119,32 @@ public class GpsService extends Service implements LocationListener {
 		// TODO Auto-generated method stub
 		
 	}
+=======
+    /**
+     * Catch provider disabled
+     */
+    @Override
+    public void onProviderDisabled(String provider) {
+        // TODO Auto-generated method stub
+
+    }
+
+    /**
+     * Catch provider enabled
+     */
+    @Override
+    public void onProviderEnabled(String provider) {
+        // TODO Auto-generated method stub
+
+    }
+
+    /**
+     * Catch status change
+     */
+    @Override
+    public void onStatusChanged(String provider, int status, Bundle extras) {
+        // TODO Auto-generated method stub
+
+    }
+>>>>>>> 653de5e045f600214a538ac598e045af78fab10c
 }

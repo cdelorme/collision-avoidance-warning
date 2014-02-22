@@ -10,12 +10,7 @@ import android.content.Intent;
 import android.content.Context;
 import android.widget.TextView;
 
-public class MainActivity extends Activity implements LocationListener {
-
-	/**
-	 * Constant activity tag
-	 */
-	public static final String TAG = "MainActivity";
+public class MainActivity extends Activity {
 
 	/**
 	 * Gps Service Thread
@@ -41,11 +36,6 @@ public class MainActivity extends Activity implements LocationListener {
 	 * Text View (for Activity)
 	 */
 	protected TextView tv;
-
-	/**
-	 * ???
-	 */
-	protected Context mCtx;
 
 	/**
 	 * Executed on activity launch
@@ -84,17 +74,12 @@ public class MainActivity extends Activity implements LocationListener {
 			this.wifiServiceEnabled = false;
 		}
 		// @todo logic to swap text/color to toggle start to stop button
+
+		// Prepare Activity UI
+        setContentView(R.layout.activity_main);
 	}
 
-	/**
-	 * Catch provider disabled
-	 */
-	@Override
-	public void onProviderDisabled(String provider) {
-		// TODO Auto-generated method stub
-
-	}
-
+<<<<<<< HEAD
 	/**
 	 * Catch provider enabled
 	 */
@@ -118,4 +103,15 @@ public class MainActivity extends Activity implements LocationListener {
 		// TODO Auto-generated method stub
 		
 	}
+=======
+    /**
+     * Create Options Menu
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+>>>>>>> 653de5e045f600214a538ac598e045af78fab10c
 }
