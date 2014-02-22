@@ -46,7 +46,6 @@ public class MainActivity extends Activity {
 		this.gpsServiceEnabled = false;
 		this.wifiServiceEnabled = false;
 
-
 		// Prepare Activity UI
         setContentView(R.layout.activity_main);
 	}
@@ -61,34 +60,44 @@ public class MainActivity extends Activity {
         return true;
     }
     
-    public void onToggleClicked(View view) {
-        // Is the toggle on?
-		// @todo add start button
-		// @todo add bindings to allow activity communication
-		/**
-		 *  Move these to start button click event
-		 */
-		Intent gpsIntent = new Intent(this, GpsService.class);
-		if (this.gpsServiceEnabled != true) {
-			startService(gpsIntent);
-			this.gpsServiceEnabled = true;
-		} else {
-			stopService(gpsIntent);
-			this.gpsServiceEnabled = false;
-		}
-
-		/**
-		 *  Move these to start button click event
-		 */
-		Intent wifiIntent = new Intent(this, WifiService.class);
-		if (this.wifiServiceEnabled != true) {
-			startService(wifiIntent);
-			this.wifiServiceEnabled = true;
-		} else {
-			stopService(wifiIntent);
-			this.wifiServiceEnabled = false;
-		}
-		// @todo logic to swap text/color to toggle start to stop button
-
+    public void startActivityPed(View view) {
+    	Intent i = new Intent(this, PedWarning.class);
+    	startActivity(i);
     }
+    
+    public void startActivityCar(View view) {
+    	Intent i = new Intent(this, CarWarning.class);
+    	startActivity(i);
+    }
+//    
+//    public void onToggleClicked(View view) {
+//        // Is the toggle on?
+//		// @todo add start button
+//		// @todo add bindings to allow activity communication
+//		/**
+//		 *  Move these to start button click event
+//		 */
+//		Intent gpsIntent = new Intent(this, GpsService.class);
+//		if (this.gpsServiceEnabled != true) {
+//			startService(gpsIntent);
+//			this.gpsServiceEnabled = true;
+//		} else {
+//			stopService(gpsIntent);
+//			this.gpsServiceEnabled = false;
+//		}
+//
+//		/**
+//		 *  Move these to start button click event
+//		 */
+//		Intent wifiIntent = new Intent(this, WifiService.class);
+//		if (this.wifiServiceEnabled != true) {
+//			startService(wifiIntent);
+//			this.wifiServiceEnabled = true;
+//		} else {
+//			stopService(wifiIntent);
+//			this.wifiServiceEnabled = false;
+//		}
+//		// @todo logic to swap text/color to toggle start to stop button
+//
+//    }
 }
