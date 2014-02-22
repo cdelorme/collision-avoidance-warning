@@ -12,10 +12,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
-import android.widget.RelativeLayout;
 
 public class CarWarning extends Activity{
-
+	
 	Ringtone r;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +39,7 @@ public class CarWarning extends Activity{
             setFocusableInTouchMode(true);
 
             
-            Drawable dr = context.getResources().getDrawable(R.drawable.stop_large);
-            
-            
+            Drawable dr = context.getResources().getDrawable(R.drawable.stop_480);   
             dr.setBounds(0, 0, dr.getIntrinsicWidth(), dr.getIntrinsicHeight());
 
             Animation an = new TranslateAnimation(50, 50, 50, 200);
@@ -69,7 +66,4 @@ public class CarWarning extends Activity{
 		super.onStop();
 		r.stop();
 	}
-    
-    
-    
 }

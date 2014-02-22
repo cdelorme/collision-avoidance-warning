@@ -31,7 +31,6 @@ public class PedWarning extends Activity implements TextToSpeech.OnInitListener 
        
 	}
 	
-	
     private static class SampleView extends View {
         private AnimateDrawable mDrawable;
 
@@ -71,9 +70,10 @@ public class PedWarning extends Activity implements TextToSpeech.OnInitListener 
 		} else {
 			Log.d("tts", "PASSED");
 			 tts.setLanguage(Locale.US);
-			 tts.setPitch((float) 1.5);
+			 tts.setPitch((float) 1.1);
 			 tts.setSpeechRate((float) .75);
 			 tts.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+
 		}
 	}
 
@@ -85,6 +85,6 @@ public class PedWarning extends Activity implements TextToSpeech.OnInitListener 
 		 if (tts != null) {
 			 tts.stop();
 	         tts.shutdown();
-	        }
+	     }
 	}
 }
