@@ -30,6 +30,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+       	<activity
+            android:name=".CarWarning" >
+        </activity>
+        
+       	<activity
+            android:name=".PedWarning" >
+        </activity>
+        
+        
 
         <service android:name=".WifiService" >
         </service>
