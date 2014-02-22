@@ -1,14 +1,12 @@
 package com.hackathon.collisionavoidance;
 
-import android.util.Log;
-import android.location.Location;
-import android.location.LocationListener;
-import android.os.Bundle;
-import android.view.Menu;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.Context;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class MainActivity extends Activity {
 
@@ -48,6 +46,23 @@ public class MainActivity extends Activity {
 		this.gpsServiceEnabled = false;
 		this.wifiServiceEnabled = false;
 
+
+		// Prepare Activity UI
+        setContentView(R.layout.activity_main);
+	}
+
+    /**
+     * Create Options Menu
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    
+    public void onToggleClicked(View view) {
+        // Is the toggle on?
 		// @todo add start button
 		// @todo add bindings to allow activity communication
 		/**
@@ -75,17 +90,5 @@ public class MainActivity extends Activity {
 		}
 		// @todo logic to swap text/color to toggle start to stop button
 
-		// Prepare Activity UI
-        setContentView(R.layout.activity_main);
-	}
-
-    /**
-     * Create Options Menu
-     */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
     }
 }
