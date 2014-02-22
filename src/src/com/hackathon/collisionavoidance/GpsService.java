@@ -85,4 +85,31 @@ public class GpsService extends Service implements LocationListener {
         intent.setAction(this.TRANSMIT_GPS_DATA);
         sendBroadcast(intent);
     }
+
+    /**
+     * Catch provider disabled
+     */
+    @Override
+    public void onProviderDisabled(String provider) {
+        // TODO Auto-generated method stub
+
+    }
+
+    /**
+     * Catch provider enabled
+     */
+    @Override
+    public void onProviderEnabled(String provider) {
+        // TODO Auto-generated method stub
+
+    }
+
+    /**
+     * Catch status change
+     */
+    @Override
+    public void onStatusChanged(String provider, int status, Bundle extras) {
+        // TODO Auto-generated method stub
+
+    }
 }

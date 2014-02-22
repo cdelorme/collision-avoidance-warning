@@ -8,7 +8,7 @@ import android.content.Intent;
 import android.content.Context;
 import android.widget.TextView;
 
-public class MainActivity extends Activity implements LocationListener {
+public class MainActivity extends Activity {
 
 	/**
 	 * Constant activity tag
@@ -82,32 +82,5 @@ public class MainActivity extends Activity implements LocationListener {
 			this.wifiServiceEnabled = false;
 		}
 		// @todo logic to swap text/color to toggle start to stop button
-	}
-
-	/**
-	 * Catch provider disabled
-	 */
-	@Override
-	public void onProviderDisabled(String provider) {
-		// TODO Auto-generated method stub
-
-	}
-
-	/**
-	 * Catch provider enabled
-	 */
-	@Override
-	public void onProviderEnabled(String provider) {
-		// TODO Auto-generated method stub
-
-	}
-
-	/**
-	 * Catch status change
-	 */
-	@Override
-	public void onStatusChanged(String provider, int status, Bundle extras) {
-		// TODO Auto-generated method stub
-
 	}
 }
