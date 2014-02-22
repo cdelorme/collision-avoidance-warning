@@ -65,6 +65,7 @@ public class MainActivity extends Activity implements LocationListener {
 		this.wifiServiceEnabled = false;
 
 		// @todo add start button
+		// @todo add bindings to allow activity communication
 		/**
 		 *  Move these to start button click event
 		 */
