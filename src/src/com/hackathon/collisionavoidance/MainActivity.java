@@ -97,46 +97,7 @@ public class MainActivity extends Activity implements LocationListener {
 				.getSystemService(Context.LOCATION_SERVICE);
 
 		lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
-//
-//		Log.d(TAG, "here");
-//		gpsServiceEnabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
-//		network_enabled = lm
-//				.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
-//
-//		Log.d(TAG, "here2");
-//
-//		Location net_loc = null, gps_loc = null, finalLoc = null;
-//
-//		if (gpsServiceEnabled) {
-//			gps_loc = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-//			Log.d(TAG, "here4");
-//		}
-//		if (network_enabled) {
-//			net_loc = lm.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-//			Log.d(TAG, "here5");
-//		}
-//
-//		if (gps_loc != null && net_loc != null) {
-//
-//			if (gps_loc.getAccuracy() >= net_loc.getAccuracy())
-//				finalLoc = gps_loc;
-//			else
-//				finalLoc = net_loc;
-//
-//			// I used this just to get an idea (if both avail, its upto you
-//			// which you want to take as I taken location with more accuracy)
-//		} else {
-//
-//			if (gps_loc != null) {
-//				finalLoc = net_loc;
-//			} else if (net_loc != null) {
-//				finalLoc = gps_loc;
-//			}
-//		}
-//		Log.d(TAG, "here7");
-//		if (finalLoc != null) {
-//			Log.d(TAG, finalLoc.toString());
-//		}
+
 		setContentView(R.layout.activity_main);
 	}
 
