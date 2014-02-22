@@ -1,12 +1,15 @@
 package com.hackathon.collisionavoidance;
 
-import android.content.Intent;
-import android.content.Context;
+import java.util.ArrayList;
+import java.util.List;
+
 import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
 import android.net.wifi.p2p.WifiP2pConfig;
 import android.net.wifi.p2p.WifiP2pDevice;
-import android.net.wifi.p2p.WifiP2pManager;
 import android.net.wifi.p2p.WifiP2pDeviceList;
+import android.net.wifi.p2p.WifiP2pManager;
 import android.net.wifi.p2p.WifiP2pManager.Channel;
 import android.net.wifi.p2p.WifiP2pManager.PeerListListener;
 

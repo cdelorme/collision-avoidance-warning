@@ -2,9 +2,12 @@ package com.hackathon.collisionavoidance;
 
 import android.app.Service;
 import android.content.Context;
+import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.net.wifi.p2p.WifiP2pManager.Channel;
+import android.os.Bundle;
+import android.os.IBinder;
 
 /**
  * Background Wifi Service
@@ -79,5 +82,11 @@ public class WifiService extends Service {
         // Send out packet data in wifi message
 
     }
+
+	@Override
+	public IBinder onBind(Intent intent) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
