@@ -52,10 +52,14 @@ void init_Lat_Long(){
      * Parameters:
      *      double[] one: what will become the latitude array
      *      double[] two: what will become the longitude array
+     *      double[] three: what will become the Velocity array
+     *      double[] four: what will become the Times array
      */
-void Set_Lat_Long(double[] one, double[] two){
+void Set_Lat_Long(double[] one, double[] two, double[] three, double[] four){
     this.Lats = one;
     this.Longs = two;
+    this.Velos = three;
+    this.Times = four;
 }
 
     /* A function to calculate the line of best fit using the data
