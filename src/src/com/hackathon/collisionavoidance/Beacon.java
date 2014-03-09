@@ -25,8 +25,9 @@ public class Beacon {
 public static void main(String[] args){
     double[] x = {8, 2, 11, 6, 5, 4, 12, 9, 6, 1};
     double[] y = {3, 10, 3, 6, 8, 12, 1, 4, 9, 14};
+    double[] nope = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     Beacon bacon = new Beacon();
-    bacon.Set_Lat_Long(x, y);
+    bacon.Set_Lat_Long(x, y, nope, nope);
     bacon.Calc_Best_Fit();
     System.out.println("Beacon Info");
     String lat_long = "Lat & Long: ";
@@ -60,6 +61,32 @@ void Set_Lat_Long(double[] one, double[] two, double[] three, double[] four){
     this.Longs = two;
     this.Velos = three;
     this.Times = four;
+}
+
+    /* Tick takes in new values for the arrays, shifts all the existing 
+     * values over by one, and recalculates the ratio & line of best fit
+     *
+     * Parameters:
+     *      double lat: new value for latitude
+     *      double lon: new value for longitude
+     *      double velo: new value for velocity
+     *      doublg time: new value for time
+     */
+void Tick(double lat, double lon, double velo, double time) {
+    for(int i=0; i<this.Lats.length; i++){
+        if(i+1<5){
+            this.Lats[i+1] = this.Lats[i];
+            this.Longs[i+1] = this.Longs[i];
+            this.Velos[i+1] = this.Velos[i];
+            this.Times[i+1] = this.Times[i];
+        }
+    }
+    this.Lats[0] = lat;
+    this.Longs[0] = lon;
+    this.Velos[0] = velo;
+    this.Times[0] = time;
+    Calc_Best_Fit();
+    Calc_Ratio();
 }
 
     /* A function to calculate the line of best fit using the data
